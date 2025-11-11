@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rescisão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Calculadora de Rescisão (Simplificada)</h1>
+        <form id="calc-form">
+            <div class="input-group">
+                <label for="salario">Salário Bruto (R$)</label>
+                <input type="number" id="salario" step="0.01" placeholder="Ex: 3000.00" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="data-admissao">Data de Admissão</label>
+                <input type="date" id="data-admissao" required>
+            </div>
+
+            <div class="input-group">
+                <label for="data-demissao">Data de Demissão (Último dia)</label>
+                <input type="date" id="data-demissao" required>
+            </div>
+
+            <div class="input-group">
+                <label for="aviso-previo">Aviso Prévio</label>
+                <select id="aviso-previo" required>
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="indenizado">Indenizado (pago pela empresa)</option>
+                    <option value="trabalhado">Trabalhado (você cumpriu)</option>
+                </select>
+            </div>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div id="resultado">
+            <!-- Aqui será exibido o resultado do cálculo -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
